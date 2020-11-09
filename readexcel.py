@@ -27,4 +27,5 @@ def plot_data(start, end, start2=0, end2=0):
             bpy.ops.mesh.primitive_sphere_add(location=(latitude, longitude, height));
             
             
-plot_data();
+plot_data(0, "END"); #plot all lines
+plot_data(-89.232, 54.794,  -89.200, 120.690); #plot from (-89.232, 54.794) to (-89.2, 120.69)
