@@ -1,5 +1,6 @@
 import csv
-import bpy
+import bpy 
+END = 0;
 lunar_data = open("fy20_adc_data_file_88_degrees.csv", newline="");
 def plot_data(start, end, start2=0, end2=0):
     #(reset screen)
@@ -8,7 +9,7 @@ def plot_data(start, end, start2=0, end2=0):
     for row in csv.reader(lunar_data):
         line_number += 1;
         if (isinstance(start, int)):
-            if (line_number >= start && end == "END"):
+            if (line_number >= start && end == 0):
                 draw = True;
             elif (line_number >= start && line_number <= end):
                 draw = True;
@@ -27,5 +28,5 @@ def plot_data(start, end, start2=0, end2=0):
             bpy.ops.mesh.primitive_sphere_add(location=(latitude, longitude, height));
             
             
-plot_data(0, "END"); #plot all lines
+plot_data(0, END); #plot all lines
 plot_data(-89.232, 54.794,  -89.200, 120.690); #plot from (-89.232, 54.794) to (-89.2, 120.69)
