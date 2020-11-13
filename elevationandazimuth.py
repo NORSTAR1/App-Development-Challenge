@@ -11,3 +11,7 @@ def getElevation(xa, ya, za, xb, yb, zb):
     rz = Xab * math.cos(ya) * math.cos(xa) + Yab * math.cos(ya) * math.sin(xa) + Zab * math.sin(ya);
     elevation = math.asin(rz/Range);
     return elevation;
+
+if ( getAzimuth(moon to earth) == getAzimuth(moon to horizon) ):
+    if ( getElevation(to earth) > getElevation(to horizon) ):
+        ding ding ding
