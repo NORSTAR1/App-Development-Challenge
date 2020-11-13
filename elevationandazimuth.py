@@ -7,6 +7,9 @@ def getElevation(xa, ya, za, xb, yb, zb):
     Xab = xb - xa;
     Yab = yb - ya;
     Zab = zb - za;
+    if (Xab < 0 || Yab < 0 || Zab < 0):
+        print("Input error!");
+        return -1;
     Range = math.sqrt(Xab**2 + Yab**2 + Zab**2);
     rz = Xab * math.cos(ya) * math.cos(xa) + Yab * math.cos(ya) * math.sin(xa) + Zab * math.sin(ya);
     elevation = math.asin(rz/Range);
