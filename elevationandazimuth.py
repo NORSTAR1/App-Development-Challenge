@@ -20,4 +20,4 @@ if ( getAzimuth(moon to earth) == getAzimuth(moon to horizon) ):
     if ( getElevation(to earth) > getElevation(to horizon) ):
         checkpoints.append();
         
-sortByHeight = checkpoints.sort(key=lambda x: x.max())[0:10];
+sortByHeight = checkpoints.sort(key=lambda x: x.max())[0:10];  #sort checkpoints by height and clip first 10
