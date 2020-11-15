@@ -13,7 +13,7 @@ for row in inFile:
 
  
 # make mesh
-vertices = inFile;
+vertices = data;
 edges = []
 faces = []
 new_mesh = bpy.data.meshes.new('new_mesh')
