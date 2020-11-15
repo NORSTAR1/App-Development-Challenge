@@ -3,11 +3,13 @@ import bpy
 
 csvfile = open('C:/Users/xgman/Downloads/output.csv')
 inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
-
+data = [];
 for row in inFile:
     row[0] = (float(row[0])+88)*1850
     row[1] = (float(row[1])+88)*1850
     row[2] = (float(row[2])+88)*1850
+    data.append(row);
+
 
  
 # make mesh
