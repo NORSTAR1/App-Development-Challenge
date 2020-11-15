@@ -5,9 +5,9 @@ csvfile = open('C:/Users/xgman/Downloads/output.csv')
 inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
 
 for row in inFile:
-    row[0] = (row[0]+88)*1850
-    row[1] = (row[1]+88)*1850
-    row[2] = (row[2]+88)*1850
+    row[0] = (float(row[0])+88)*1850
+    row[1] = (float(row[1])+88)*1850
+    row[2] = (float(row[2])+88)*1850
 
  
 # make mesh
