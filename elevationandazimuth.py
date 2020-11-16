@@ -18,6 +18,10 @@ def getElevation(xa, ya, za, xb, yb, zb):
 
 checkpoints = [];
 
+for row in inFile:
+    if ()
+
+
 csvfile = open('data.csv')
 inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
 for row in inFile:
@@ -44,7 +48,7 @@ def sortBy(checkpoints, by=2):
     while (len(checkpointsBySort) < len(checkpoints)):
         if (checkpointsBySort[i] == checkpoints[i][by]):
             checkpointsBySort[i] = checkpoints[i];
-    return(checkpointsByHeight[0:10])
+    return(checkpointsBySort[0:10])
 
 byLat = sortBy(checkpoints, 0);
 byLong = sortBy(checkpoints, 1);
