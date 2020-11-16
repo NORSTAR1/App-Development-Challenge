@@ -32,14 +32,22 @@ for row in inFile:
 
         
 checkpoints = [[-88, 2, 4, 5], [-89, 3, 2, 5], [-90, 1, 2, 3]];
-checkpointsByHeight = [];    
 #sortByHeight = checkpoints.sort(key=lambda x: max(x))[0:10]  #sort checkpoints by height and clip first 10
 
-for i in range(len(checkpoints)-1):
-    checkpointsByHeight.append(checkpoints[i][2]);
-checkpointsByHeight.sort();
-while (len(checkpointsByHeight) < len(checkpoints)):
-    if (checkpointsByHeight[i] == checkpoints[i][2]):
-        checkpointsByHeight[i] = checkpoints[i];
-checkpointsByHeight = checkpointsByHeight[0:10];
-print(checkpointsByHeight)
+
+
+def sortBy(checkpoints, by=2):
+    checkpointsBySort = [];    
+    for i in range(len(checkpoints)-1):
+        checkpointsBySort.append(checkpoints[i][by]);
+    checkpointsBySort.sort();
+    while (len(checkpointsBySort) < len(checkpoints)):
+        if (checkpointsBySort[i] == checkpoints[i][by]):
+            checkpointsBySort[i] = checkpoints[i];
+    return(checkpointsByHeight[0:10])
+
+byLat = sortBy(checkpoints, 0);
+byLong = sortBy(checkpoints, 1);
+byHeight = sortBy(checkpoints, 2);
+bySlope = sortBy(checkpoints, 3);
+
