@@ -40,18 +40,20 @@ checkpoints = [[-88, 2, 4, 5], [-89, 3, 2, 5], [-90, 1, 2, 3]];
 
 
 
-def sortBy(checkpoints, by=2):
+def sortBy(by=2):
+    global checkpoints;
     checkpointsBySort = [];    
-    for i in range(len(checkpoints)-1):
+    for i in range(len(checkpoints)):
         checkpointsBySort.append(checkpoints[i][by]);
     checkpointsBySort.sort();
-    while (len(checkpointsBySort) < len(checkpoints)):
-        if (checkpointsBySort[i] == checkpoints[i][by]):
-            checkpointsBySort[i] = checkpoints[i];
-    return(checkpointsBySort[0:10])
+    for i in range(len(checkpoints)):
+        for g in range(0, len(checkpoints)):
+            if (checkpointsBySort[g] == checkpoints[i][by]):
+                checkpointsBySort[g] = checkpoints[i];
+    return(checkpointsBySort[:10]);
 
-byLat = sortBy(checkpoints, 0);
-byLong = sortBy(checkpoints, 1);
-byHeight = sortBy(checkpoints, 2);
-bySlope = sortBy(checkpoints, 3);
+byLat = sortBy(0);
+byLong = sortBy(1);
+byHeight = sortBy(2);
+bySlope = sortBy(3);
 
