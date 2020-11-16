@@ -27,10 +27,10 @@ checkpointsByHeight = [];
 #sortByHeight = checkpoints.sort(key=lambda x: max(x))[0:10]  #sort checkpoints by height and clip first 10
 
 for i in range(len(checkpoints)-1):
-    checkpointsByHeight.append(checkpoints[i][0]);
+    checkpointsByHeight.append(checkpoints[i][2]);
 checkpointsByHeight.sort();
 while (len(checkpointsByHeight) < len(checkpoints)):
-    if (checkpointsByHeight[i] == checkpoints[i][0]):
+    if (checkpointsByHeight[i] == checkpoints[i][2]):
         checkpointsByHeight[i] = checkpoints[i];
 checkpointsByHeight = checkpointsByHeight[0:10];
 print(checkpointsByHeight)
