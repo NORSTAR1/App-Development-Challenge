@@ -32,5 +32,5 @@ checkpointsByHeight.sort();
 while (len(checkpointsByHeight) < len(checkpoints)):
     if (checkpointsByHeight[i] == checkpoints[i][0]):
         checkpointsByHeight[i] = checkpoints[i];
-    
+checkpointsByHeight = checkpointsByHeight[0:10];
 print(checkpointsByHeight)
