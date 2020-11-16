@@ -15,10 +15,19 @@ def getElevation(xa, ya, za, xb, yb, zb):
     elevation = math.asin(rz/Range);
     return elevation;
 
+
 checkpoints = [];
-if ( getAzimuth(moon to earth) == getAzimuth(moon to horizon) ):
-    if ( getElevation(to earth) > getElevation(to horizon) ):
-        checkpoints.append();
+
+csvfile = open('data.csv')
+inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
+for row in inFile:
+    lat = row[0];
+    long = row[1];
+    height = row[2];
+    slope = row[3];
+    if ( getAzimuth(lat, long, to earth) == getAzimuth(lat,long, to horizon) ):
+        if ( getElevation(to earth) > getElevation(to horizon) ):
+            checkpoints.append();
         
 
         
