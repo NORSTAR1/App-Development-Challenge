@@ -45,7 +45,7 @@ def sortBy(by=2):
     checkpointsBySort = [];    
     for i in range(len(checkpoints)):
         checkpointsBySort.append(checkpoints[i][by]);
-    checkpointsBySort.sort();
+    checkpointsBySort.sort(reverse=True);
     for i in range(len(checkpoints)):
         for g in range(0, len(checkpoints)):
             if (checkpointsBySort[g] == checkpoints[i][by]):
@@ -54,6 +54,6 @@ def sortBy(by=2):
 
 byLat = sortBy(0);
 byLong = sortBy(1);
-byHeight = sortBy(2);
-bySlope = sortBy(3);
+byHeight = sortBy(2); #sort by the heighest point
+bySlope = sortBy(3); #sort by the highest slope
 
