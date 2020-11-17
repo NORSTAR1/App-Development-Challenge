@@ -52,8 +52,8 @@ def sortBy(by=2):
                 checkpointsBySort[g] = checkpoints[i];
     return(checkpointsBySort[:10]);
 
-byLat = sortBy(0);
-byLong = sortBy(1);
+byLat = sortBy(0); #sort by highest longitude
+byLong = sortBy(1); #sort by highest latitude
 byHeight = sortBy(2); #sort by the heighest point
 bySlope = sortBy(3); #sort by the highest slope
 
