@@ -17,9 +17,6 @@ def getElevation(xa, ya, za, xb, yb, zb):
 
 
 checkpoints = [];
-
-
-
 earth = [361000, 0, -42100];
 horizon = [0,0,0];
 csvfile = open('data.csv')
@@ -34,13 +31,7 @@ for row in inFile:
             checkpoints.append();
         
 
-        
-checkpoints = [[-88, 2, 4, 5], [-89, 3, 2, 5], [-90, 1, 2, 3]];
-#sortByHeight = checkpoints.sort(key=lambda x: max(x))[0:10]  #sort checkpoints by height and clip first 10
-
-
-
-def sortBy(by=2):
+def sortBy(by=2): #sort checkpoints by 'by' and clip the first 10
     global checkpoints;
     checkpointsBySort = [];    
     for i in range(len(checkpoints)):
