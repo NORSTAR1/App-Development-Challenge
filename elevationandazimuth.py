@@ -20,6 +20,12 @@ checkpoints = [];
 earth = [361000, 0, -42100];
 horizon = [0,0,0];
 csvfile = open('data.csv')
+
+inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
+for row in inFile:
+    if (getElevation(row[0], row[1], row[2], earth[0], earth[1], earth[2]) == 0):
+        horizon = row;
+        print(horizon);
 inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
 for row in inFile:
     lat = row[0];
