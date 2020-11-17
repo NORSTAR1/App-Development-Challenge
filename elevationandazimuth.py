@@ -18,10 +18,10 @@ def getElevation(xa, ya, za, xb, yb, zb):
 
 checkpoints = [];
 
-for row in inFile:
-    if ()
 
 
+earth = [361000, 0, -42100];
+horizon = [0,0,0];
 csvfile = open('data.csv')
 inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
 for row in inFile:
@@ -29,8 +29,8 @@ for row in inFile:
     long = row[1];
     height = row[2];
     slope = row[3];
-    if ( getAzimuth(lat, long, to earth) == getAzimuth(lat,long, to horizon) ):
-        if ( getElevation(to earth) > getElevation(to horizon) ):
+    if ( getAzimuth(lat, long, earth[0], earth[1]) == getAzimuth(lat, long, horizon[0], horizon[1]) ):
+        if ( getElevation(lat, long, height, earth[0], earth[1], earth[2]) > getElevation(lat, long, height, horizon[0], horizon[1], horizon[2]) ):
             checkpoints.append();
         
 
