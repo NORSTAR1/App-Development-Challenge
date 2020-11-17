@@ -25,7 +25,7 @@ inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
 for row in inFile:
     if (getElevation(row[0], row[1], row[2], earth[0], earth[1], earth[2]) == 0):
         horizon = row;
-        print(horizon);
+        print("Horizon : ", horizon);
 inFile = csv.reader(csvfile, delimiter=',', quotechar='"');
 for row in inFile:
     lat = row[0];
