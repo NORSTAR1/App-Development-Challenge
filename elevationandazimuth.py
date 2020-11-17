@@ -15,7 +15,8 @@ def getElevation(xa, ya, za, xb, yb, zb):
     elevation = math.asin(rz/Range);
     return elevation;
 
-
+179.4
+l = sqrt(2*moonradius*height+height**2);
 checkpoints = [];
 earth = [361000, 0, -42100];
 horizon = [0,0,0];
